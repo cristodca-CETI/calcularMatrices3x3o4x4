@@ -52,3 +52,22 @@ function calcularMatriz4x4 () {
     }
     document.getElementById('resultado4x4').classList.remove("invisible")
 }
+
+function setRandomData (n) {
+    if (n === 3) {
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                document.getElementById(`a${i}${j}`).value = Math.floor(Math.random() * (20 - 0)) + 0
+            }
+        }
+        calcularMatriz3x3()
+    }
+    if (n === 4 ){
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                document.getElementById(`b${i}${j}`).value = Math.floor(Math.random() * (20 - 0)) + 0
+            }
+        }
+        calcularMatriz4x4()
+    }
+}
