@@ -71,3 +71,12 @@ function setRandomData (n) {
         calcularMatriz4x4()
     }
 }
+
+function clearData (n, element) {
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+            document.getElementById(`${element}${i}${j}`).value = ''
+        }
+    }
+    document.getElementById(`resultado${n}x${n}`).classList.add("invisible")
+}
